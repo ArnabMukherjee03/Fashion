@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Routes , Route } from "react-router-dom";
 // Import Links
 import Nav from "./Component/Universal/Nav";
@@ -10,10 +10,15 @@ import Singleproduct from "./Component/SingleProduct/Singleproduct";
 import Cart from "./Component/Cart/Cart";
 import Footer from "./Component/Universal/Footer";
 
+import ClipLoader from "react-spinners/ClockLoader";
+
+
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import { ProductContext } from "./Context/ProductContext";
 
 const App = ()=>{
+   const{loading} = useContext(ProductContext);
    return(
     <>
       <Nav/>

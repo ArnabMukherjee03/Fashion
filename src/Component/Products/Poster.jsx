@@ -23,7 +23,7 @@ const Poster = ()=>{
              <h1 className="mb-2" style={{color:"#624a2e",fontSize:"40px"}}>Great Leather Collection</h1>
              <h5>Select your New Perfect Style</h5>
              </div>
-             : type != "Jewelery" ?
+             : type !== "Jewelery" ?
              <div className="posterContent">
              <h5 className="mb-2">Discount</h5>
              <h1 className="mb-2">Summer 2023</h1>

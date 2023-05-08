@@ -58,7 +58,7 @@ const AllProducts = () =>{
                     </div>
                     </div>
                     <h3 className="title"><NavLink to={`/productdetails/${item.id}`} style={{color:"#000000",textDecoration:"none"}}>{item.title}</NavLink></h3>
-                    { type != "Accessories"  ?
+                    { type !== "Accessories"  ?
                     <div className="price">
                     <del>${item.price}</del> — <span>${parseFloat(item.price - item.price*30/100).toFixed(2)}</span>
                     </div>

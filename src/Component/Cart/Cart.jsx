@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
 // Import CartItem
 import CartItem from "./CartItem";
 // Import Css
