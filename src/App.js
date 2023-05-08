@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes , Route } from "react-router-dom";
+// Import Links
+import Nav from "./Component/Universal/Nav";
+import Home from "./Component/Home/Home";
+import About from "./Component/About/About";
+import Contact from "./Component/Contact/Contact";
+import Product from "./Component/Products/Product";
+import Singleproduct from "./Component/SingleProduct/Singleproduct";
+import Cart from "./Component/Cart/Cart";
+import Footer from "./Component/Universal/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+
+const App = ()=>{
+   return(
+    <>
+      <Nav/>
+      <Routes>
+         <Route path="/" Component={Home}></Route>
+         <Route path="/about" Component={About}></Route>
+         <Route path="/contact" Component={Contact}></Route>
+         <Route path="/product/:type" Component={Product}></Route>
+         <Route path="productdetails/:id" Component={Singleproduct}></Route>
+      </Routes>
+      <Cart/>
+      <Footer/>
+    </>
+   )
 }
 
 export default App;

@@ -1,0 +1,22 @@
+.innerCart{
+    width: 100%;
+    min-height: 150px;
+    column-gap: 1rem;
+}
+
+.flex-1{flex: 1 1 0%;}
+
+.cartImg{
+    width: 80px!important;
+}
+
+.cartItemHead{
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem;
+    color: #000!important;
+    width: 200px!important;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Libre Baskerville', serif !important;
+
+}

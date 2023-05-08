@@ -1,0 +1,61 @@
+.productMenPoster{
+    height: 100vh;
+    background: url("../../Image/slide-03.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.productWomenPoster{
+    height: 100vh;
+    background: url("../../Image/slide-01.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.productAccPoster{
+    height: 100vh;
+    background: url("../../Image/watch.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.productJewPoster{
+    height: 100vh;
+    background: url("../../Image/606b4f98b7ce239e935be095_RefractionCover.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.productPoster{
+    position: relative;
+}
+
+.posterContent{
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    transform: translateY(-50%);
+}
+
+.posterJewContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.posterContent h5{
+    font-size: 25px;
+}
+
+.posterContent h1{
+    font-size: 50px;
+    color: #0fb78d;
+}
+
+.timer{
+    font-size: 20px;
+    gap: 16px;
+    font-family: 'Libre Baskerville', serif !important;
+}
+

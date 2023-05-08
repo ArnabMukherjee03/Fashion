@@ -1,0 +1,221 @@
+
+.poster{
+    position: relative;
+    height: 100vh;
+}
+
+.carousel-item:nth-child(1){
+    background: url(../../Image/hero_bg_5.jpg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.carousel-item:nth-child(2){
+    background: url(../../Image/hero_bg_6.jpg.webp);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.poster::before{
+    content: " ";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    height: 100%;
+    opacity: 0.4;
+}
+.carousel-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-transform: uppercase;
+    width: 50%;
+    flex-direction: column;
+}
+.head{
+    font-size: 48px!important;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.homeBtn{
+    border: 1px solid #fff!important;
+    color: #fff!important;
+    transition: all 0.5s;
+}
+.homeBtn:hover{
+    background-color: #000000!important;
+    border: 1px solid #000000!important;
+}
+.subHead{
+    font-size: 18px!important;
+}
+.carousel-item span{
+     color: #0fb78d;
+}
+/* Feature */
+.co-section {
+    padding: 100px 0;
+}
+.feature {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+}
+.feature .icon {
+    font-size: 30px;
+}
+.feature h3 {
+    font-size: 11px;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.feature p {
+    font-size: 15px;
+    color: #b3b3b3;
+}
+
+/* Product */
+.product-item {
+    text-align: center;
+}
+.product-item .product-img {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 30px;
+    cursor: pointer;
+    
+}
+
+
+.product-item .product-img .custom-badge.new {
+    background: #0fb78d!important;
+}
+.product-item .product-img .custom-badge {
+    position: absolute;
+    padding: 5px 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    color: #ffffff;
+}
+.img-fluid {
+    max-width: 70%!important;
+    height: 300px!important;
+}
+.product-item h3 {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.product-item .price {
+    font-size: 13px;
+}
+.addCart{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all;
+    height: 45px;
+    background: #0fb78d;
+    width: 45px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all, 0.5s;
+}
+
+.showCart{
+    
+    transition: all, 0.5s;
+    cursor: pointer;
+}
+
+
+.product-img:hover .addCart{
+    opacity: 1;
+}
+/* Deal Section */
+.deal-hero {
+    background-image: url(../../Image/hero-1.jpg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+.deal-hero .deal-contents {
+    width: 50%;
+    padding: 30px;
+    background: #ffffff;
+    left: 20px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.deal-hero .deal-contents p{
+    font-size: 11px;
+    letter-spacing: .1rem;
+}
+
+.btn.btn-black {
+    background: #000000!important;
+    color: #ffffff!important;
+}
+
+/* Responsive Design */
+@media screen and (max-width:991.98px){
+.deal-hero .deal-contents {
+    width: auto;
+    right: 20px;
+    left: 20px;
+}
+}
+@media screen and (max-width:640px){
+    /* carousel */
+    .poster{
+        height: 80vh!important;
+    }
+
+    .carousel-content{
+        width: 80%!important;
+       
+    }
+
+    .Head{
+        font-size: 40px!important;
+    }
+    .homeBtn{
+        border: 1px solid #fff!important;
+        color: #fff!important;
+        font-size: 12px!important;
+    }
+    .subHead:nth-child(1){
+
+        font-size: 15px!important;
+    }
+    /* Product */
+    .img-fluid {
+        max-width: 100%!important;
+        height: 200px!important;
+    }
+    .co-section {
+        padding: 50px 0!important;
+    }
+    /* Deal */
+    .deal-hero{
+        height: 50vh!important;
+        background-position: top!important;
+    }
+}

@@ -1,0 +1,41 @@
+/* .page-heading, .page-heading > .container > .row {
+    height: 40vh;
+    min-height: 200px;
+} */
+.contact-info i {
+    font-size: 20px;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #0fb78d!important;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    color: rgb(255, 255, 255)!important;
+}
+
+
+
+.contact-info h4 {
+    font-size: 18px;
+    padding: 0px 0px 0px 60px;
+}
+
+.contact-info h4 {
+    font-size: 18px;
+    padding: 0px 0px 0px 60px;
+}
+
+.contact-info p {
+    padding: 0px 0px 0px 60px!important;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+ .textArea {
+    min-height: 200px!important;
+}

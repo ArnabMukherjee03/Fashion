@@ -1,0 +1,82 @@
+.loading{
+    height: 100vh!important;
+}
+
+.singleproduct{
+    padding: 8rem 0px 8rem 0px!important;
+    height: 100vh!important;
+}
+.flex-1{
+    flex: 1 1 0%!important;
+}
+
+
+.accessoriesImage{
+    max-width: 300px;
+}
+
+.producttext{
+    text-align: left!important;
+}
+
+.producttext h1{
+    margin-bottom: 0.5rem; 
+    font-size: 26px;
+    font-weight: 500;
+    max-width: 450px!important;
+}
+
+ .producttext .price{
+    font-size: 1.25rem!important; /* 20px */
+    line-height: 1.75rem!important; /* 28px */
+    font-weight: 500!important;
+    color: red;
+    
+}
+.priceDiv{
+    margin-bottom: 1.5rem!important;
+    gap: 40px;
+}
+.producttext p{
+    margin-bottom: 2rem!important;
+    font-size: 11px;
+    letter-spacing: .1rem;
+}
+
+.producttext button {
+    background: #000000!important;
+    color: #fff!important;
+    padding: 1rem 2rem 1rem 2rem!important;
+    font-family: 'Libre Baskerville', serif !important;
+}
+.singleproduct .container{
+    margin-top: 90px;
+}
+
+/* Resonsive design */
+
+@media screen and (max-width:600px) {
+
+    .singleproduct{
+        padding: 8rem 0px 3rem 0px!important;
+    }
+
+    .singleproduct .container{
+        margin-top: 0px!important;
+    }
+    
+    .productimage{
+        margin-bottom: 2rem!important;
+    }
+    .productimage img{
+        max-width: 200px;
+    }
+    .producttext{
+        text-align: center!important;
+    }
+    .priceDiv{
+        
+        gap: 10px!important;
+    }
+    
+}
