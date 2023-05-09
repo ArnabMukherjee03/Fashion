@@ -24,7 +24,7 @@ const Poster = ()=>{
              <h5>Select your New Perfect Style</h5>
              </div>
              : type !== "Jewelery" ?
-             <div className="posterContent d-flex flex-lg-column flex-column-reverse">
+             <div className="posterContent d-flex flex-lg-column flex-md-column flex-column-reverse">
              <div className="">
              <h5 className="mb-2">Discount</h5>
              <h1 className="mb-2">Summer 2023</h1>

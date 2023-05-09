@@ -6,7 +6,7 @@ const Footer = () =>{
         <div className="site-footer" style={{background: "#e0e2e0"}}>
         <div className="container">
         <div className="row">
-        <div className="col-lg-2">
+        <div className="col-lg-2 col-md-2">
         <div className="widget">
         <h3>Help</h3>
         <ul className="list-unstyled">
@@ -18,7 +18,7 @@ const Footer = () =>{
         </ul>
         </div>
         </div>
-        <div className="col-lg-2">
+        <div className="col-lg-2 col-md-2">
         <div className="widget">
         <h3>About</h3>
         <ul className="list-unstyled">
@@ -30,7 +30,7 @@ const Footer = () =>{
         </ul>
         </div>
         </div>
-        <div className="col-lg-2">
+        <div className="col-lg-2 col-md-2">
         <div className="widget">
         <h3>Shop</h3>
         <ul className="list-unstyled">
@@ -40,7 +40,7 @@ const Footer = () =>{
         </ul>
         </div>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 col-md-6">
         <div className="widget">
         <h3>Join our list and receive exclusives</h3>
         <form action="#" className="subscribe">

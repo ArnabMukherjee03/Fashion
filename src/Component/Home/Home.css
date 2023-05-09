@@ -176,10 +176,17 @@
 
 /* Responsive Design */
 @media screen and (max-width:991.98px){
+    .carousel-content{
+        width: 80%;
+    }
 .deal-hero .deal-contents {
     width: auto;
     right: 20px;
     left: 20px;
+}
+.deal-hero{
+    height: 30vh!important;
+    background-position: center!important;
 }
 }
 @media screen and (max-width:640px){
@@ -216,6 +223,13 @@
     /* Deal */
     .deal-hero{
         height: 50vh!important;
-        background-position: top!important;
+        background-position: center!important;
+    }
+    
+}
+
+@media screen and (max-width:400px){
+    .subHead:nth-child(1){
+        font-size: 13px!important;
     }
 }
