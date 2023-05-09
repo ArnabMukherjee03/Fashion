@@ -10,19 +10,23 @@ import ProductProvider from './Context/ProductContext';
 import SidebarProvider from './Context/SidebarContext';
 import CartProvider from './Context/cartContext';
 import TypeProductProvider from './Context/TypeProductContext';
+import FirebaseProvider from './Context/FirebaseContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <BrowserRouter>
+  <FirebaseProvider>
   <SidebarProvider>
   <CartProvider>
   <ProductProvider>
   <TypeProductProvider>
-  <BrowserRouter>
     <App />
-  </BrowserRouter>
   </TypeProductProvider>
   </ProductProvider>
   </CartProvider>
   </SidebarProvider>
+  </FirebaseProvider>
+  </BrowserRouter>
 );
 

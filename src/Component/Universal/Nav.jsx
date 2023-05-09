@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 //  import sidebar context
 import {SidebarContext} from "../../Context/SidebarContext";
 import { CartContext } from "../../Context/cartContext";
+import { FirebaseContext } from "../../Context/FirebaseContext";
 
 const Nav = () => {
   const[isActive,setisActive] = useState(false);
@@ -14,6 +15,7 @@ const Nav = () => {
     setShowNavbar(!showNavbar)
   }
 
+  const{user} = useContext(FirebaseContext)
 
   // Event Listner
 
@@ -33,7 +35,7 @@ const Nav = () => {
           <div className="col-12 col-lg-11 mx-lg-auto ">
               <nav className="navbar d-flex ">
                   <div className="logo">
-                      <p className="brand">Product</p>
+                      <p className="brand">Fashion</p>
                   </div>
                   <div className={`items  ${showNavbar && 'get'}`}>
                     <ul className="navUl">
@@ -61,7 +63,11 @@ const Nav = () => {
                     </ul>
                   </div>
                   <div className="menuicon d-flex">
-                      <NavLink to="/login"><i className="fa-solid fa-user navIcon"></i> </NavLink>
+                      {user === null ?
+                      <NavLink to="/signin"><i className="fa-solid fa-user navIcon"></i> </NavLink>
+                      :
+                      <NavLink><i class="fa-solid fa-right-from-bracket navIcon"></i></NavLink>
+                      }
                       <NavLink onClick={()=> setIsOpen(!isOpen)} style={{position:"relative"}}><i className="fa-solid fa-cart-shopping navIcon"></i>
                       <span className="navAmount text-center">{itemAmount}</span>
                       </NavLink>

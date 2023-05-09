@@ -9,16 +9,15 @@ import Product from "./Component/Products/Product";
 import Singleproduct from "./Component/SingleProduct/Singleproduct";
 import Cart from "./Component/Cart/Cart";
 import Footer from "./Component/Universal/Footer";
-
-import ClipLoader from "react-spinners/ClockLoader";
-
+import Signup from "./Component/SignUp/SignUp";
+import Signin from "./Component/SignUp/SignIn";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import { ProductContext } from "./Context/ProductContext";
+
 
 const App = ()=>{
-   const{loading} = useContext(ProductContext);
+   
    return(
     <>
       <Nav/>
@@ -28,6 +27,8 @@ const App = ()=>{
          <Route path="/contact" Component={Contact}></Route>
          <Route path="/product/:type" Component={Product}></Route>
          <Route path="productdetails/:id" Component={Singleproduct}></Route>
+         <Route path="/signup" Component={Signup}></Route>
+         <Route path="/signin" Component={Signin}></Route>
       </Routes>
       <Cart/>
       <Footer/>

@@ -1,0 +1,56 @@
+.formContainer{
+    padding: 60px 0px;
+}
+
+.Sign .brand:nth-child(2){
+    color: rgba(0, 0, 0, 0.5)!important;
+}
+.formContainer input{
+    width: 60%;   
+    border: none;
+    border-bottom:1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    color: #000;
+    font-size: 12px;
+    font-family: 'Libre Baskerville', serif !important;
+}
+
+.formContainer input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.form-input{
+    gap: 30px;
+    
+}
+
+.signBtn{
+    background: #000!important;
+    width: 60%;
+    padding: 7px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #000!important;
+    font-family: 'Libre Baskerville', serif !important;
+}
+
+.signUp{
+    color: #000;
+    background: #fff!important;
+}
+
+.signUp:hover{
+    color: #000!important;
+}
+
+@media screen and (max-width:600px){
+    .formContainer input{
+        width: 90%;
+    }
+    .signBtn{
+        width: 90%;
+    }
+}
