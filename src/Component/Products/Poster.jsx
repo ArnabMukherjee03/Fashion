@@ -14,7 +14,7 @@ const Poster = ()=>{
                'productAccPoster'
                :
                'productJewPoster'
-            } productPoster`
+            } productPoster posterHeight`
         }>
         
         {  type === "Accessories" ?
@@ -24,11 +24,13 @@ const Poster = ()=>{
              <h5>Select your New Perfect Style</h5>
              </div>
              : type !== "Jewelery" ?
-             <div className="posterContent">
+             <div className="posterContent d-flex flex-lg-column flex-column-reverse">
+             <div className="">
              <h5 className="mb-2">Discount</h5>
              <h1 className="mb-2">Summer 2023</h1>
              <h5>Sale <span style={{color: "#0fb78d"}}>30%</span></h5>
-             <div className="mt-4 countDown">
+             </div>
+             <div className="mt-4 mb-3 countDown">
              <Timer/>
              </div>
              </div>

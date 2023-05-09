@@ -39,3 +39,10 @@
  .textArea {
     min-height: 200px!important;
 }
+
+
+@media screen and (max-width:600px){
+    .page-heading, .page-heading > .container > .row {
+        height: 20vh;
+    }
+}

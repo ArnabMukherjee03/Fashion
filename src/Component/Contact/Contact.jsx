@@ -19,7 +19,7 @@ const Contact = () =>{
         <div className="row mb-5">
         <div className="col-lg-4 mb-5 order-2 mb-lg-0 ">
         <div className="contact-info">
-        <div className="address mt-4">
+        <div className="address mt-5 mt-lg-4">
         <i class="fa-solid fa-location-dot"></i>
         <h4 className="mb-2">Location:</h4>
         <p>Durgapur, WestBengal, India</p>

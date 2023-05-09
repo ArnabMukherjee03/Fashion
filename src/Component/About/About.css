@@ -1,0 +1,43 @@
+.Aboutposter{
+    background: url("../../Image/bg-01.jpg.webp");
+    position: relative;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aboutPosterContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff!important;
+}
+.aboutContent{
+    flex-basis: 50%;
+}
+
+.aboutContent p{
+    font-size: 14px;
+    letter-spacing: .1rem;
+}
+.aboutImg {
+    flex-basis: 50%;
+    position: relative;
+}
+.aboutImg img{
+    width: 100%;
+}
+
+.aboutImg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -21px;
+    left: -21px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ccc;
+}
