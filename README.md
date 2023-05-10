@@ -2,6 +2,9 @@
 
 This GitHub repository contains an exciting e-commerce project developed using React, a popular JavaScript library for building user interfaces. This project aims to provide a seamless and engaging online shopping experience for users, incorporating various essential features and functionalities.
 
+## Screenshots
+![App Screenshot](/src/Image/Home.png)
+
 ## 🎯 Key Features:
 - User Registration and Authentication: Secure user sign-up and login functionality to ensure personalized shopping experiences.
 - Product Catalog: Display a comprehensive catalog of products, including images, descriptions, prices, and availability.
@@ -32,4 +35,6 @@ This GitHub repository contains an exciting e-commerce project developed using R
 
 ## 🙌 Contributions:
 Contributions, bug reports, and feature requests are welcome! Feel free to open issues or submit pull requests to help improve this e-commerce project.
+
+
 
