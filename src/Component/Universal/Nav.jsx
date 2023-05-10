@@ -15,7 +15,7 @@ const Nav = () => {
     setShowNavbar(!showNavbar)
   }
 
-  const{user} = useContext(FirebaseContext)
+  const{signOut,isLoggedIn,firebaseAuth} = useContext(FirebaseContext)
 
   // Event Listner
 
@@ -63,10 +63,10 @@ const Nav = () => {
                     </ul>
                   </div>
                   <div className="menuicon d-flex">
-                      {user === null ?
+                      {!isLoggedIn ?
                       <NavLink to="/signin"><i className="fa-solid fa-user navIcon"></i> </NavLink>
                       :
-                      <NavLink><i class="fa-solid fa-right-from-bracket navIcon"></i></NavLink>
+                      <NavLink onClick={()=>signOut(firebaseAuth)}><i class="fa-solid fa-right-from-bracket navIcon"></i></NavLink>
                       }
                       <NavLink onClick={()=> setIsOpen(!isOpen)} style={{position:"relative"}}><i className="fa-solid fa-cart-shopping navIcon"></i>
                       <span className="navAmount text-center">{itemAmount}</span>

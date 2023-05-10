@@ -1,16 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FirebaseContext } from "../../Context/FirebaseContext";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Signup = ()=>{
-    const{SignUpWithEmailPassword}=useContext(FirebaseContext);
+    const navigate = useNavigate();
+    const{SignUpWithEmailPassword,isLoggedIn,err,setErr}=useContext(FirebaseContext);
     const[val,setVal] = useState(false);
     const[email,setEmail] = useState('');
     const[password,setPassword] = useState('');
     const[confirmPassword,setConfirmPassword] = useState('');
 
-    console.log(email,password)
 
     useEffect(()=>{
         if(password === confirmPassword){
@@ -20,6 +21,20 @@ const Signup = ()=>{
         }
     },[password,confirmPassword])
     
+    const handleClick = async()=>{
+        
+        val ?
+        await SignUpWithEmailPassword(email,password)
+        :  setErr("Password not matched")
+    
+
+    }
+
+    useEffect(()=>{
+        if(isLoggedIn){
+            navigate("/");
+        }
+    },[navigate,isLoggedIn])
 
     return(
         <>
@@ -42,7 +57,10 @@ const Signup = ()=>{
                        <input type="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="E-mail" />
                        <input type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="Password" />
                        <input type="password" onChange={e => setConfirmPassword(e.target.value)} value={confirmPassword} placeholder="Confirm Password" />
-                       <button type="submit" onClick={()=>{val ?  SignUpWithEmailPassword(email,password) : alert("Password Not Matched")}} className="signBtn">Create Account</button>
+                       <button type="submit" onClick={()=>{handleClick()}} className="signBtn">Create Account</button>
+                   </div>
+                   <div className="col-lg-7 mx-auto">
+                   <p className="error mt-3 brand text-center">{err}</p>
                    </div>
                </div>
             </div>

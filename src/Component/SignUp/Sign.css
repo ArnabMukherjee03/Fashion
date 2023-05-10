@@ -46,6 +46,11 @@
     color: #000!important;
 }
 
+.error{
+    color: #ff0000!important;
+    font-size: 12px!important;
+    text-transform: none;
+}
 @media screen and (max-width:600px){
     .formContainer input{
         width: 90%;

@@ -32,10 +32,6 @@ const CartProvider = ({children})=>{
         setTotal(total);
     },[setTotal,cart])
 
-    useEffect(()=>{
-
-    },)
-
     const addToCart = (product,id)=>{
         const newItem = {...product, amount: 1};
         // check if the item already in the cart
@@ -71,8 +67,7 @@ const CartProvider = ({children})=>{
     const clearCart = ()=>{
         setcart([]);
     }
-    console.log(cart)
-
+    
     // Increase amount
     const increase = (id)=>{
         const cartItem = cart.find(item => item.id === parseInt(id));

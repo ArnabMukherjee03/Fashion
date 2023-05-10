@@ -1,17 +1,17 @@
 import React, { createContext, useEffect, useState } from "react";
 
 import { initializeApp } from "firebase/app";
-import {getAuth,createUserWithEmailAndPassword,onAuthStateChanged} from "firebase/auth";
+import {getAuth,createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPassword,signOut} from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAw9_NhoPNRp4Tw-gExR7B1d3IjF9J2M0k",
-    authDomain: "fashion-2b963.firebaseapp.com",
-    projectId: "fashion-2b963",
-    storageBucket: "fashion-2b963.appspot.com",
-    messagingSenderId: "103157323795",
-    appId: "1:103157323795:web:1697bd1c7327f7a19f87e6",
-    measurementId: "G-V97FEZS7VT",
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId:  process.env.REACT_APP_PROJECT_ID,
+    storageBucket:  process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId:  process.env.REACT_APP_MESSEAGING_SENDER_ID,
+    appId:  process.env.REACT_APP_API_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
   };
 
 
@@ -28,6 +28,7 @@ export const FirebaseContext = createContext();
 const FirebaseProvider = ({children}) =>{
     const navigate = useNavigate();
     const[user,setUser] = useState(null);
+    const[err,setErr] = useState("");
 
     useEffect(()=>{
         onAuthStateChanged(firebaseAuth, user => {
@@ -45,10 +46,19 @@ const FirebaseProvider = ({children}) =>{
             console.log(res);
             navigate("/")
         }).catch(err =>{
-            console.log(err);
+            setErr(err);
         })
     }
-    return<FirebaseContext.Provider value={{SignUpWithEmailPassword,user}}>{children}</FirebaseContext.Provider>
+    const SignInWithEmail = (email,password)=>{
+        signInWithEmailAndPassword(firebaseAuth,email,password)
+        .then(res =>{
+            console.log(res)
+        })
+        .catch(err => setErr(err));
+    }
+
+    const isLoggedIn = user ? true : false
+    return<FirebaseContext.Provider value={{SignUpWithEmailPassword,isLoggedIn,SignInWithEmail,err,setErr,signOut,firebaseAuth}}>{children}</FirebaseContext.Provider>
 }
 
 export default FirebaseProvider;

@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Sign.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { FirebaseContext } from "../../Context/FirebaseContext";
 const SignIn = ()=>{
+    const[email,setEmail] = useState('');
+    const[password,setPassword] = useState('');
+
+    const navigate = useNavigate();
+
+    const{SignInWithEmail,err,isLoggedIn} = useContext(FirebaseContext);
+
+    const handleClick = async () =>{
+        
+        await SignInWithEmail(email,password);
+    }
+
+    useEffect(()=>{
+        if(isLoggedIn){
+            navigate("/")
+        }
+    },[navigate,isLoggedIn])
+
     return(
         <>
             <div className="Sign" style={{minHeight:"180px"}}>
@@ -20,13 +39,14 @@ const SignIn = ()=>{
             <div className="container">
                <div className="row">
                    <div className="col-lg-7 form-input d-flex flex-column align-items-center justify-content-center mx-auto">
-                       <input type="email" placeholder="E-mail" />
-                       <input type="password" placeholder="Password" />
-                       <button type="submit" className="signBtn">Log In</button>
+                       <input type="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="E-mail" />
+                       <input type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="Password" />
+                       <button type="submit" onClick={()=>{handleClick()}} className="signBtn">Log In</button>
                    </div>
                    <div className="col-lg-7 d-flex flex-column align-items-center justify-content-center mx-auto">
                         <p className="brand mt-3">need an account?</p>
                         <NavLink to="/signup" className="signBtn signUp mt-3 text-center" style={{textDecoration:"none"}}>Register</NavLink>
+                        <p className="error mt-2 brand">{err}</p>
                    </div>
                </div>
             </div>
