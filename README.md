@@ -16,6 +16,7 @@ This GitHub repository contains an exciting e-commerce project developed using R
 ## 💻 Technologies Used:
 - React: JavaScript library for building the user interface.
 - React Router: Navigation library for handling different routes and page transitions.
+- Context: State management to manage application state.
 - Fetch: Promise-based HTTP client for making API requests.
 - Firebase Authentication : provides methods to create and manage users that use their email addresses and passwords to sign in
 - HTML5: Markup language for structuring web pages.
